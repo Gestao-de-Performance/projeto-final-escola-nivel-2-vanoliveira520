@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lúcio Prado Construções</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Lúcio Prado Construções</h1>
+        <nav>
+            <ul>
+                <li><a href="#terraplenagem">Terraplenagem</a></li>
+                <li><a href="#pocos">Poços Semi Artesianos</a></li>
+                <li><a href="#tubos">Tubos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="carousel">
+            <div class="carousel-images">
+                <div class="carousel-item active">
+                    <img src="poço2.jpg" alt="Poço semi artesiano jorrando água">
+                    <p>Água de qualidade garantida com nossos poços semi-artesianos. Soluções eficientes para suas necessidades.</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="trator.jpg" alt="trator fazendo terraplenagem">
+                    <p>Transforme terrenos em oportunidades com nossa terraplenagem de qualidade.</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="tubos.jpg" alt="tubos de pvc da marca MXM">
+                    <p>Encontre a solução perfeita com nossos tubos de PVC: qualidade, durabilidade e eficiência para suas construções.</p>
+                </div>
+            </div>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Lúcio Prado Construções. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

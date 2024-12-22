@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #062f4f; /* Cor de fundo */
+    color: #ffffff; /* Cor do texto */
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 2.5em; /* Tamanho grande para o nome da empresa */
+    margin: 0;
+}
+
+nav {
+    margin: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em; /* Tamanho do texto do menu */
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Cor ao passar o mouse */
+}
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+    max-height: 500px; /* Altura máxima para as imagens */
+    object-fit: cover; /* Cobre o espaço disponível */
+}
+
+.carousel-item p {
+    padding: 10px;
+    font-size: 1.5em; /* Tamanho do texto abaixo da imagem */
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    color: #062 ```css
+f4f; /* Cor do texto do botão */
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em; /* Tamanho do nome da empresa em telas menores */
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    nav ul li a {
+        font-size: 1em; /* Tamanho do texto do menu em telas menores */
+    }
+
+    .carousel-item p {
+        font-size: 1.2em; /* Tamanho do texto abaixo da imagem em telas menores */
+    }
+}
