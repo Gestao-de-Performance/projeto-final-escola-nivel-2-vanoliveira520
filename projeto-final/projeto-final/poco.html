@@ -1,0 +1,83 @@
+poco.html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lúcio Prado Construções</title>
+    <link rel="stylesheet" href="terraplenagem.css">
+</head>
+<body>
+    <header>
+        
+        <h1>Lúcio Prado</h1>
+        <h2>Construções</h2>
+
+
+        <nav>
+            <ul class="menu">
+                <li><a href="lucio.html">Home</a></li>
+                <li><a href="terraplenagem.html">Terraplenagem</a></li>
+                <li><a href="poco.html">Poços Semi Artesianos</a></li>
+                <li><a href="tubo.html">Tubos</a></li>
+                <li><a href="#https://wa.me/5511932095512">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="container"> 
+            <img src="poco.jpg" alt="poço semi artesiano jorrando água"> 
+        <div class="text"> <h3>Poço Semi Artesiano</h3> <p>Um poço semi-artesiano é uma solução eficiente e confiável para a obtenção de água subterrânea. Diferente dos poços artesianos, que são perfurados até atingir um aquífero confinado sob pressão, os poços semi-artesianos são perfurados até camadas de água subterrânea menos profundas e não confinadas.
+
+            A construção de um poço semi-artesiano envolve a perfuração do solo até encontrar um lençol freático, seguido pela instalação de tubos e filtros para garantir a qualidade da água. Esse tipo de poço é ideal para propriedades rurais, residências e pequenas indústrias que necessitam de um abastecimento constante de água.
+            
+            Os benefícios de um poço semi-artesiano incluem:
+            
+            Qualidade da Água: A água extraída geralmente é de boa qualidade, adequada para consumo humano e uso doméstico.
+            
+            Sustentabilidade: Reduz a dependência de fontes de água superficiais, que podem ser mais suscetíveis à contaminação e variações sazonais.
+            
+            Economia: A longo prazo, um poço semi-artesiano pode ser mais econômico do que depender de serviços públicos de abastecimento de água.
+            
+            Em resumo, os poços semi-artesianos são uma excelente opção para garantir um fornecimento de água confiável e de qualidade, atendendo às necessidades de diversas aplicações. Se precisar de mais alguma coisa, é só falar!</p> 
+        </div> 
+    </div>
+        
+    <div class="mensagem">
+        <h2>Enviar Mensagem</h2>
+        <input type="text" id="nome" placeholder="Seu nome">
+        <textarea id="mensagem" placeholder="Sua mensagem"></textarea>
+        <button onclick="enviarMensagem()">Enviar</button>
+    </div>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("j9AQlS4XpGtt96f0WuOCG"); 
+        })();
+
+        function enviarMensagem() {
+            var nome = document.getElementById("nome").value;
+            var mensagem = document.getElementById("mensagem").value;
+
+            if (nome && mensagem) {
+                var templateParams = {
+                    nome: nome,
+                    mensagem: mensagem
+                };
+
+                emailjs.send('service_cvf9ddj', 'template_br146hp', templateParams)
+                    .then(function(response) {
+                        alert('Mensagem enviada com sucesso!');
+                    }, function(error) {
+                        alert('Erro ao enviar mensagem: ' + JSON.stringify(error));
+                    });
+            } else {
+                alert('Por favor, preencha todos os campos.');
+            }
+        }
+    </script>
+   
+            <a href="https://wa.me/5511932095512" class="whatsapp-icon" target="_blank"> 
+                <img src="whatsapp.jpg" alt="WhatsApp">
+            </a>
+            </header>

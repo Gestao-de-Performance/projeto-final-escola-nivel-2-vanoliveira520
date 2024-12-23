@@ -1,0 +1,85 @@
+tubo.html
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lúcio Prado Construções</title>
+    <link rel="stylesheet" href="terraplenagem.css">
+</head>
+<body>
+    <header>
+        <h1>Lúcio Prado</h1>
+        <h2>Construções</h2>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="lucio.html">Home</a></li>
+                <li><a href="terraplenagem.html">Terraplenagem</a></li>
+                <li><a href="poco.html">Poços Semi Artesianos</a></li>
+                <li><a href="tubo.html">Tubos</a></li>
+                <li><a href="#https://wa.me/5511932095512">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="container"> 
+            <img src="tubos.jpg" alt="Estoque de tubos de PVC"> 
+        <div class="text"> <h3>Tubos de PVC</h3> <p>Os tubos de PVC (Policloreto de Vinila) são amplamente utilizados em diversas aplicações devido às suas propriedades versáteis e benefícios. Eles são conhecidos por sua durabilidade, resistência à corrosão e facilidade de instalação, tornando-os uma escolha popular em projetos de construção e infraestrutura.
+
+            ### Benefícios dos Tubos de PVC
+            
+            1. **Durabilidade**: Os tubos de PVC são altamente resistentes a impactos e abrasões, o que os torna ideais para uso em ambientes exigentes.
+            2. **Resistência à Corrosão**: Diferente de outros materiais, o PVC não enferruja nem se deteriora quando exposto a substâncias químicas, garantindo uma longa vida útil.
+            3. **Facilidade de Instalação**: Leves e fáceis de manusear, os tubos de PVC podem ser cortados e unidos rapidamente, reduzindo o tempo e os custos de instalação.
+            4. **Versatilidade**: Disponíveis em várias formas e tamanhos, os tubos de PVC podem ser usados em sistemas de água potável, esgoto, drenagem, irrigação e muito mais.
+            5. **Custo-Benefício**: Além de serem mais baratos que muitos outros materiais, os tubos de PVC também requerem menos manutenção, resultando em economia a longo prazo.
+            
+            ### Aplicações Comuns
+            
+            - **Sistemas de Água Potável**: Devido à sua resistência à corrosão e à capacidade de manter a qualidade da água, os tubos de PVC são frequentemente usados em sistemas de distribuição de água potável.
+            - **Drenagem e Esgoto**: A durabilidade e a resistência química dos tubos de PVC os tornam ideais para sistemas de esgoto e drenagem.
+            - **Irrigação**: Em sistemas agrícolas, os tubos de PVC são usados para transportar água de forma eficiente e confiável.
+            - **Construção Civil**: Utilizados em conduítes elétricos e sistemas de ventilação, os tubos de PVC são essenciais em muitos aspectos da construção moderna.
+            
+            Em resumo, os tubos de PVC são uma solução confiável e eficiente para uma ampla gama de aplicações, oferecendo benefícios significativos em termos de durabilidade, resistência e custo-benefício. Se precisar de mais alguma coisa, é só falar!</p>
+       
+            <div class="mensagem">
+                <h2>Enviar Mensagem</h2>
+                <input type="text" id="nome" placeholder="Seu nome">
+                <textarea id="mensagem" placeholder="Sua mensagem"></textarea>
+                <button onclick="enviarMensagem()">Enviar</button>
+            </div>
+        
+            <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+            <script>
+                (function(){
+                    emailjs.init("j9AQlS4XpGtt96f0WuOCG"); 
+                })();
+        
+                function enviarMensagem() {
+                    var nome = document.getElementById("nome").value;
+                    var mensagem = document.getElementById("mensagem").value;
+        
+                    if (nome && mensagem) {
+                        var templateParams = {
+                            nome: nome,
+                            mensagem: mensagem
+                        };
+        
+                        emailjs.send('service_cvf9ddj', 'template_br146hp', templateParams)
+                            .then(function(response) {
+                                alert('Mensagem enviada com sucesso!');
+                            }, function(error) {
+                                alert('Erro ao enviar mensagem: ' + JSON.stringify(error));
+                            });
+                    } else {
+                        alert('Por favor, preencha todos os campos.');
+                    }
+                }
+            </script>
+
+            <a href="https://wa.me/5511932095512" class="whatsapp-icon" target="_blank"> 
+                <img src="whatsapp.jpg" alt="WhatsApp">
+            </a>
+            </header>

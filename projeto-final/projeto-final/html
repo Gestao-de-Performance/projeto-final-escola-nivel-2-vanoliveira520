@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lúcio Prado Construções</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Lúcio Prado</h1>
+        <h2>Construções</h2>
+        <nav>
+            <ul class="menu">
+                <li><a href="terraplenagem.html">Terraplenagem</a></li>
+                <li><a href="poco.html">Poços Semi Artesianos</a></li>
+                <li><a href="tubo.html">Tubos</a></li>
+                <li><a href="#https://wa.me/5511932095512">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="image-box"> 
+            <a href="terraplenagem.html"> 
+                <img src="trator.jpg" alt="trator trabalhando em um terreno"> 
+        </a> 
+        <a href="poco.html"> 
+            <img src="poço2.jpg" alt="poço semi artesiano jorrando água"> 
+        </a> 
+        <a href="tubo.html"> 
+            <img src="tubos.jpg" alt="Estoque de tubos de PVC"> 
+        </a> 
+    </div>
+
+   
+        <div class="mensagem">
+            <h2>Enviar Mensagem</h2>
+            <input type="text" id="nome" placeholder="Seu nome">
+            <textarea id="mensagem" placeholder="Sua mensagem"></textarea>
+            <button onclick="enviarMensagem()">Enviar</button>
+        </div>
+    
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script>
+            (function(){
+                emailjs.init("j9AQlS4XpGtt96f0WuOCG"); 
+            })();
+    
+            function enviarMensagem() {
+                var nome = document.getElementById("nome").value;
+                var mensagem = document.getElementById("mensagem").value;
+    
+                if (nome && mensagem) {
+                    var templateParams = {
+                        nome: nome,
+                        mensagem: mensagem
+                    };
+    
+                    emailjs.send('service_cvf9ddj', 'template_br146hp', templateParams)
+                        .then(function(response) {
+                            alert('Mensagem enviada com sucesso!');
+                        }, function(error) {
+                            alert('Erro ao enviar mensagem: ' + JSON.stringify(error));
+                        });
+                } else {
+                    alert('Por favor, preencha todos os campos.');
+                }
+            }
+        </script>
+ 
+    
+
+        <a href="https://wa.me/5511932095512" class="whatsapp-icon" target="_blank"> 
+        <img src="whatsapp.jpg" alt="WhatsApp">
+        </a>
+    </header>
+    </body>
+</html>
+    
+  

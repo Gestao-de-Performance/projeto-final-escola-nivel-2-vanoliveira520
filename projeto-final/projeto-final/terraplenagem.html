@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lúcio Prado Construções</title>
+    <link rel="stylesheet" href="terraplenagem.css">
+</head>
+<body>
+    <header>
+        <h1>Lúcio Prado</h1>
+        <h2>Construções</h2>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="lucio.html">Home</a></li>
+                <li><a href="terraplenagem.html">Terraplenagem</a></li>
+                <li><a href="poco.html">Poços Semi Artesianos</a></li>
+                <li><a href="tubo.html">Tubos</a></li>
+                <li><a href="#https://wa.me/5511932095512">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="container"> 
+            <img src="trator.jpg" alt="trator trabalhando em um terreno"> 
+        <div class="text"> <h3>Terraplenagem</h3> <p>Terraplenagem é um processo essencial na construção civil e em projetos de engenharia. Envolve a preparação do terreno para receber obras, como edifícios, estradas, pontes e outras infraestruturas. O objetivo principal da terraplenagem é criar uma superfície nivelada e estável, removendo ou adicionando terra conforme necessário.
+
+            Este processo inclui várias etapas, como a limpeza do terreno, a remoção de vegetação e detritos, a escavação, o transporte de terra, o nivelamento e a compactação do solo. Equipamentos pesados, como escavadeiras, tratores e compactadores, são frequentemente utilizados para realizar essas tarefas de maneira eficiente.
+            
+            A terraplenagem é crucial para garantir a estabilidade e a segurança das construções, prevenindo problemas futuros, como deslizamentos de terra e erosão. Além disso, uma terraplenagem bem executada pode melhorar a drenagem do terreno e facilitar a instalação de fundações e outras estruturas.
+            
+            Em resumo, a terraplenagem é a base sobre a qual grandes projetos são construídos, transformando terrenos irregulares em superfícies prontas para receber as mais diversas obras de engenharia e construção.
+</p>
+
+<div class="mensagem">
+    <h2>Enviar Mensagem</h2>
+    <input type="text" id="nome" placeholder="Seu nome">
+    <textarea id="mensagem" placeholder="Sua mensagem"></textarea>
+    <button onclick="enviarMensagem()">Enviar</button>
+</div>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    (function(){
+        emailjs.init("j9AQlS4XpGtt96f0WuOCG"); 
+    })();
+
+    function enviarMensagem() {
+        var nome = document.getElementById("nome").value;
+        var mensagem = document.getElementById("mensagem").value;
+
+        if (nome && mensagem) {
+            var templateParams = {
+                nome: nome,
+                mensagem: mensagem
+            };
+
+            emailjs.send('service_cvf9ddj', 'template_br146hp', templateParams)
+                .then(function(response) {
+                    alert('Mensagem enviada com sucesso!');
+                }, function(error) {
+                    alert('Erro ao enviar mensagem: ' + JSON.stringify(error));
+                });
+        } else {
+            alert('Por favor, preencha todos os campos.');
+        }
+    }
+</script>
+
+            <a href="https://wa.me/5511932095512" class="whatsapp-icon" target="_blank"> 
+                <img src="whatsapp.jpg" alt="WhatsApp">
+            </a>
+            </header>
